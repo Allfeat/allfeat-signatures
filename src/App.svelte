@@ -9,10 +9,10 @@
     import FormField from './lib/FormField/FormField.svelte'
 
     let fields = {
-        name: 'Jean Christophe Barat',
-        role: 'Chief Executive Officer',
-        social_twitter: 'jcbarat',
-        social_linkedin: 'jcbarat',
+        name: '',
+        role: '',
+        social_twitter: '',
+        social_linkedin: '',
     }
 
     // Copy button
@@ -116,7 +116,7 @@
             </FormField>
         </form>
 
-        <!-- {#if Object.values(fields).every(value => value)} -->
+        {#if Object.values(fields).every(value => value)}
             <div class="signature">
                 {@html signatureCode}
             </div>
@@ -127,6 +127,6 @@
             >
                 {copyButtonText[buttonState]}
             </button>
-        <!-- {/if} -->
+        {/if}
     </div>
 </main>
