@@ -1,0 +1,49 @@
+/* Colors
+========================================================================== */
+$color-light: #FFFBEB;
+$color-light-90: #EDE8D5;
+$color-light-75: #C4C0B1;
+$color-dark: #151515;
+$color-accent-red: #FF4A5F;
+$color-accent-teal: #00B18C;
+
+
+/* Fonts
+========================================================================== */
+$base-font-size: 18px;
+
+// Families
+$replacement-sans: "Helvetica, arial, sans-serif";
+$font-sans: "TASA Orbiter", #{$replacement-sans};
+
+
+/* Sizes, margins and spacing
+========================================================================== */
+$base-width: 1440 !default;
+$container-width: 768px !default;
+$margin-side-m: 16px !default;
+$margin-side-d: 24px !default;
+
+// Grid
+$cols-m: 10 !default;
+$cols-d: 24 !default;
+
+
+/* Directories
+========================================================================== */
+$dir-img: "../images" !default;
+$dir-fonts: "../" !default;
+
+
+/* Responsive breakpoints
+========================================================================== */
+$breakpoints: (
+    mob: 450px,
+    mob-lg: 550px,
+    xs: 767px,
+    sm: 768px,
+    md: 992px,
+    sd: 1200px,
+    lg: 1440px,
+    xl: 1600px,
+) !default;

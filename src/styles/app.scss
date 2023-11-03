@@ -1,0 +1,98 @@
+main {
+    padding: clamp(32px, 7vw, 64px) 0;
+}
+
+h1 {
+    margin-top: 0.5em;
+    padding: 0.5em 0;
+    border-top: 1px solid var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+}
+
+// Logo
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+// Form
+form {
+    display: grid;
+    gap: 16px 24px;
+    margin-top: 2em;
+
+    @include bp (sm) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    // Button
+    :global(.button) {
+        grid-column: 1 / -1;
+        margin-right: auto;
+    }
+}
+
+    // Form input
+    .input {
+        --padding-x: 16px;
+        --padding-y: 16px;
+        display: block;
+        width: 100%;
+        padding: var(--padding-y) var(--padding-x);
+        background: var(--color-light-90);
+        font-family: inherit;
+        font-size: pxrem(14px);
+        font-weight: 500;
+        color: var(--color-text);
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.5s var(--ease-quart);
+
+        @include bp (sm) {
+            --padding-x: 24px;
+            --padding-y: 22px;
+            font-size: pxrem(16px);
+        }
+
+        // State: Hover + Focus
+        &:hover, &:focus {
+            background-color: var(--color-light-75);
+        }
+    }
+
+    // Form button
+    button {
+        --sides: 12px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding-left: var(--sides);
+        padding-right: var(--sides);
+        height: 40px;
+        color: var(--color-light);
+        font-family: $font-sans;
+        font-size: pxrem(16px);
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: opacity 0.4s var(--ease-quart);
+        background: var(--color-dark);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.4s var(--ease-quart), color 0.4s var(--ease-quart);
+
+        @include bp (sm) {
+            font-size: pxrem(20px);
+        }
+
+        &:hover {
+            background-color: var(--color-accent-red);
+        }
+    }
+
+// Signature
+.signature {
+    margin: 3em 0 1.5em;
+}

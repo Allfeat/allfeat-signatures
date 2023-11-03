@@ -1,0 +1,72 @@
+html {
+    font: #{$base-font-size}/1.2 $font-sans;
+    color: var(--color-dark);
+    word-break: normal;
+    background: var(--color-light);
+}
+body {
+    @include font-smooth;
+    overscroll-behavior: none;
+
+    &.is-loading * {
+        cursor: wait !important;
+    }
+    &.block-scroll {
+        overflow: hidden;
+    }
+}
+*, *:before, *:after {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+figure, p, dl, dt, dd, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+figure, picture {
+    display: block;
+}
+nav li:before {
+    display: none;
+}
+label {
+    cursor: pointer;
+}
+button {
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+// Accessibility outline
+// Remove default focus styles for mouse users if :focus-visible is supported
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+    outline: none;
+}
+[data-focus-visible-added], *:focus-visible {
+    outline: 1px dashed var(--color-dark);
+}
+
+// Selection
+::selection {
+    color: var(--color-light);
+    background: var(--color-dark);
+}
+
+// Images glitches fix
+// img {backface-visibility: hidden;}
+
+
+
+/* Titles
+========================================================================== */
+#{headings(1,6)} {
+    margin: 0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Global elements
+========================================================================== */

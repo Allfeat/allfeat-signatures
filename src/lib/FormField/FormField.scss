@@ -1,0 +1,34 @@
+.field {
+    // Title
+    .title {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-family: $font-sans;
+        margin-bottom: 8px;
+        font-size: pxrem(16px);
+
+        @include bp (sm) {
+            font-size: pxrem(20px);
+        }
+
+        // After
+        &:after {
+            --size: 4px;
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            margin-left: 8px;
+            border-radius: 100%;
+            background: var(--color-error);
+            transform: scale(0);
+            will-change: transform;
+            transition: transform 0.5s var(--ease-quart);
+
+            @include bp (sm) {
+                --size: 6px;
+            }
+        }
+    }
+}
